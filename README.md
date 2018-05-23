@@ -1,13 +1,19 @@
 # CryptoPanWrapper
 
 
+(Copyright 2018 by L. Aaron Kaplan <kaplan@cert.at>, all rights reserved)
+
+
+## TL;DR
+
 This is a simple wrapper class around the following libraries:
 
   * [pycryptopan](https://github.com/certtools/pycryptopan)
   * [yacryptopan](https://github.com/keiichishima/yacryptopan/)
   * [cryptopanlib](https://github.com/certtools/cryptopanlib)
 
-## Crypto-PAn
+
+## What is Crypto-PAn?
 
 Crypto-PAn stands for Cryptograpy-based prefix preserving Anonymization.
 Quoting from [the original site]():
@@ -20,9 +26,11 @@ In this implementation, we use Rijndael cipher(AES algorithm) as underlying
 pseudorandom function. "
 
 **Note**: technically speaking, what Crypto-PAn does, is actually **pseudonymization** of IP addresses.
-Since every IP address is mapped uniquely (1-1) onto another IP address (via AES encryption).
-So, for all purposes of [GDPR](), Crypto-PAn does **pseudonymization**. However, the original paper called it anonymization.
-We will use these two terms within this page synonimously (although it's actually wrong).
+Since every IP address is mapped uniquely (1-1) onto another IP address (via AES encryption). Anonymization would be the process of mapping multiple IP addresses to the very same target IP address, efectively making the oringial IPs indistinguishable (non-reverse mappable). 
+
+So, for all purposes of [GDPR](https://en.wikipedia.org/wiki/General_Data_Protection_Regulation), Crypto-PAn does **pseudonymization**. However, the original paper called it anonymization.
+We will use these two terms within this page synonimously (although it's actually wrong). Please just bear in mind that all we will be talkig about is actually meant to be pseudonymizaiton.
+
 
 ## Implementations
 
@@ -38,7 +46,7 @@ Currently there are many implementations of the Crypto-PAn Algorithm:
 
 ## The CryptoPanWrapper
 
-This code wraps the differnet implementations and especially makes using David Stott's Lucent implementation useable via Python.
+This code wraps the different implementations and especially makes using David Stott's Lucent implementation useable via Python.
 
 How to use it?
 ```python
