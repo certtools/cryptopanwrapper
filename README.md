@@ -1,7 +1,7 @@
 # CryptoPanWrapper
 
 
-(Copyright 2018 by L. Aaron Kaplan <kaplan@cert.at>, all rights reserved)
+(Copyright 2018-2020 by L. Aaron Kaplan <aaron@lo-res.org>, all rights reserved)
 
 
 ## TL;DR
